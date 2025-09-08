@@ -1341,9 +1341,9 @@
                 <a href="https://discord.gg/CRbJcKaGNT" class="btn btn-secondary">
                     💬 discord
                 </a>
-                <a href="https://play.cursedlang.org" class="btn btn-secondary">
-                    🎮 playground
-                </a>
+                <button onclick="playLizardSound()" class="btn btn-secondary">
+                    🦎 lizard
+                </button>
             </div>
         </div>
         <br/>
@@ -1489,6 +1489,12 @@
 
         // Initialize particles when page loads
         document.addEventListener('DOMContentLoaded', createParticles);
+
+        // Lizard button sound function
+        function playLizardSound() {
+            const audio = new Audio('https://lizardlizardlizard.com/lizard-button.mp3');
+            audio.play().catch(e => console.log('Audio play failed:', e));
+        }
 
         // Add scroll effects
         window.addEventListener('scroll', () => {
